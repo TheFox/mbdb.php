@@ -1,0 +1,30 @@
+{
+	"name": "thefox/mbdb",
+	"description": "Read MBDB files.",
+	"type": "library",
+	"keywords": [ "mbdb", "db", "database" ],
+	"homepage": "https://fox21.at",
+	"license": "GPL-3.0",
+	"authors": [
+		{
+			"name": "Christian Mayer",
+			"email": "christian@fox21.at",
+			"homepage": "https://fox21.at"
+		}
+	],
+	"require": {
+		"php": "~5.3 || ~7.0"
+	},
+	"require-dev": {
+		"doctrine/common": "~2.4",
+		"thefox/phpcsrs": "~1.0"
+	},
+	"autoload": {
+		"psr-0": { "TheFox": "src" }
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.x.x-dev"
+		}
+	}
+}
