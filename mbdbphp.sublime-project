@@ -2,7 +2,7 @@
 	"folders":[
 		{
 			"path": ".",
-			"name": "MBDB",
+			"name": "MBDB.php",
 			"folder_exclude_patterns": [ "build", "vendor" ],
 			"file_exclude_patterns": [ ]
 		}
