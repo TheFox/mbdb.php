@@ -4,6 +4,12 @@ Read `.mbdb` files with PHP.
 
 The `.mbdb` file extension is associated with the Apple iTunes, the standard manage application for iOS devices. A `.mbdb` file contains a list of files, that are stored in the backup of the iOS device. The MBDB database was introduced in iTunes 9.2.
 
+## Installation
+
+The preferred method of installation is via [Packagist](https://packagist.org/packages/thefox/mbdb) and [Composer](https://getcomposer.org/). Run the following command to install the package and add it as a requirement to composer.json:
+
+	composer.phar require "thefox/mbdb=~0.1"
+
 ## Links
 
 - [Packagist Package](https://packagist.org/packages/thefox/mbdb)

@@ -4,6 +4,9 @@ namespace TheFox\Mbdb;
 
 class Mbdb{
 	
+	const NAME = 'MBDB';
+	const VERSION = '0.1.0';
+	
 	private $filePath = '';
 	private $fileHandle = null;
 	private $buffer = '';
