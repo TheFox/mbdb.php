@@ -6,13 +6,13 @@ VENDOR = vendor
 PHPCS = vendor/bin/phpcs
 PHPCS_STANDARD = vendor/thefox/phpcsrs/Standards/TheFox
 PHPCS_OPTIONS = -v -s --colors --report=full --report-width=160 --standard=$(PHPCS_STANDARD)
-PHPUNIT = vendor/bin/phpunit
+PHPCS_SOURCE = src
 COMPOSER = ./composer.phar
 COMPOSER_OPTIONS ?= --no-interaction
 
 
 .PHONY: all
-all: install
+all: install test
 
 .PHONY: install
 install: $(VENDOR)
@@ -21,6 +21,13 @@ install: $(VENDOR)
 update: $(COMPOSER)
 	$(COMPOSER) selfupdate
 	$(COMPOSER) update
+
+.PHONY: test
+test: test_phpcs
+
+.PHONY: test_phpcs
+test_phpcs: $(PHPCS) $(PHPCS_STANDARD)
+	$(PHPCS) $(PHPCS_OPTIONS) $(PHPCS_SOURCE)
 
 .PHONY: clean
 clean:
@@ -34,5 +41,3 @@ $(COMPOSER):
 	$(CHMOD) u=rwx,go=rx $(COMPOSER)
 
 $(PHPCS): $(VENDOR)
-
-$(PHPUNIT): $(VENDOR)

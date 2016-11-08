@@ -7,6 +7,7 @@ The `.mbdb` file extension is associated with the Apple iTunes, the standard man
 ## Links
 
 - [Packagist Package](https://packagist.org/packages/thefox/mbdb)
+- [Travis CI Repository](https://travis-ci.org/TheFox/mbdb)
 - [iphonebackupbrowser](https://code.google.com/p/iphonebackupbrowser/wiki/MbdbMbdxFormat)
 - [ITunes_Backup](http://theiphonewiki.com/wiki/ITunes_Backup)
 
