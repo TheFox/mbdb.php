@@ -2,7 +2,7 @@
 	"name": "thefox/mbdb",
 	"description": "Read MBDB files.",
 	"type": "library",
-	"keywords": [ "mbdb", "db", "database" ],
+	"keywords": [ "mbdb", "db", "database", "itunes", "iphone", "ios", "apple", "backup" ],
 	"homepage": "https://fox21.at",
 	"license": "GPL-3.0",
 	"authors": [
