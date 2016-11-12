@@ -46,7 +46,7 @@ class Mbdb{
 	}
 	
 	private function parseInt8(){
-		$i = unpack('C', substr($this->buffer, 0, 1));
+		$i = unpack('C', $this->buffer[0]);
 		$this->buffer = substr($this->buffer, 1);
 		$this->offset += 1;
 		return $i[1];
