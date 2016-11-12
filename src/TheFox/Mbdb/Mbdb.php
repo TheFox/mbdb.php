@@ -2,10 +2,14 @@
 
 namespace TheFox\Mbdb;
 
+use Exception;
+
 class Mbdb{
 	
 	const NAME = 'MBDB';
 	const VERSION = '0.1.0';
+	
+	const LOOP_MAX = 10000;
 	
 	private $filePath = '';
 	private $fileHandle = null;
@@ -98,13 +102,12 @@ class Mbdb{
 				
 				$loops = 0;
 				$this->buffer = '';
-				while(true){
-					$loops++;
-					if(!$this->bufferCheckRead()){
-						break;
-					}
+				while($this->bufferCheckRead() && $loops < self::LOOP_MAX){
+					print "read loop $loops\n";
 					
-					$offsetStart = $this->offset;
+					$loops++;
+					
+					// $offsetStart = $this->offset;
 					$domain = $this->parseStr();
 					$path = $this->parseStr();
 					$this->parseStr();
@@ -143,6 +146,12 @@ class Mbdb{
 				
 				unset($this->buffer);
 				fclose($this->fileHandle);
+				
+				if($loops == self::LOOP_MAX){
+					throw new Exception('Main loop has reached '.$loops);
+				}
+				
+				print "loops $loops\n";
 			}
 		}
 	}
