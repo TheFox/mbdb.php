@@ -7,7 +7,7 @@ use Exception;
 class Mbdb{
 	
 	const NAME = 'MBDB';
-	const VERSION = '0.1.0';
+	const VERSION = '0.2.0-dev';
 	
 	const LOOP_MAX = 10000;
 	
@@ -152,6 +152,9 @@ class Mbdb{
 				
 				// print "loops $loops\n";
 			}
+		}
+		else{
+			throw new Exception('File not found: '.$filePath);
 		}
 	}
 	
