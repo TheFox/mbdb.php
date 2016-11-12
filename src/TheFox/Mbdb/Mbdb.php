@@ -83,7 +83,7 @@ class Mbdb{
 		}
 		else{
 			if($bLen < 0xffff){
-				$this->buffer .= fread($this->fileHandle, 0xfffff);
+				$this->buffer .= fread($this->fileHandle, 0xffff);
 			}
 			
 			return true;
