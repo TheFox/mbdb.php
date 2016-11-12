@@ -119,10 +119,11 @@ class Mbdb{
 					$this->parseInt32();
 					$this->parseInt32();
 					$this->parseInt32();
-					$length = $this->parseInt64();
+					
+					$fileSize = $this->parseInt64();
+					
 					$this->parseInt8();
 					$propertyCount = $this->parseInt8();
-					
 					for($n = $propertyCount; $n > 0; $n--){
 						if(!$this->bufferCheckRead()){
 							break;
@@ -138,7 +139,7 @@ class Mbdb{
 					$record = new Record();
 					$record->setDomain($domain);
 					$record->setPath($path);
-					$record->setFileSize($length);
+					$record->setFileSize($fileSize);
 					$this->addRecord($record);
 				}
 				
