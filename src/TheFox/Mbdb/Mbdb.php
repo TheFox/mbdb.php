@@ -36,7 +36,6 @@ class Mbdb{
 	private function parseStr(){
 		$len = $this->parseInt16();
 		$str = '';
-		$strLen = 0;
 		
 		if($len != 0xffff){
 			$str = substr($this->buffer, 0, $len);
@@ -103,8 +102,6 @@ class Mbdb{
 				$loops = 0;
 				$this->buffer = '';
 				while($this->bufferCheckRead() && $loops < self::LOOP_MAX){
-					print "read loop $loops\n";
-					
 					$loops++;
 					
 					// $offsetStart = $this->offset;
@@ -114,6 +111,7 @@ class Mbdb{
 					$this->parseStr();
 					$this->parseStr();
 					$this->parseInt16();
+					
 					$this->parseInt32();
 					$this->parseInt32();
 					$this->parseInt32();
@@ -151,7 +149,7 @@ class Mbdb{
 					throw new Exception('Main loop has reached '.$loops);
 				}
 				
-				print "loops $loops\n";
+				// print "loops $loops\n";
 			}
 		}
 	}
