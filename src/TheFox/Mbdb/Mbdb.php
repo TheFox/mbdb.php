@@ -3,6 +3,7 @@
 namespace TheFox\Mbdb;
 
 use Exception;
+use RuntimeException;
 
 class Mbdb{
 	
@@ -97,6 +98,9 @@ class Mbdb{
 			$this->fileHandle = fopen($this->filePath, 'rb');
 			if($this->fileHandle){
 				$header = fread($this->fileHandle, 6);
+				if($header != "mbdb\x05\x00"){
+					throw new RuntimeException('Bad MBDB signature');
+				}
 				$this->offset = 6;
 				
 				$loops = 0;
