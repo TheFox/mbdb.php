@@ -8,7 +8,7 @@ use RuntimeException;
 class Mbdb
 {
     const NAME = 'MBDB';
-    const VERSION = '0.2.0-dev.2';
+    const VERSION = '0.2.0';
 
     const LOOP_MAX = 10000;
 
