@@ -42,7 +42,7 @@ class Record
     /**
      * @param string $domain
      */
-    public function setDomain($domain)
+    public function setDomain(string $domain)
     {
         $this->domain = $domain;
     }
@@ -50,7 +50,7 @@ class Record
     /**
      * @return string
      */
-    public function getDomain()
+    public function getDomain(): string
     {
         return $this->domain;
     }
@@ -58,7 +58,7 @@ class Record
     /**
      * @param string $path
      */
-    public function setPath($path)
+    public function setPath(string $path)
     {
         $this->path = $path;
     }
@@ -66,15 +66,15 @@ class Record
     /**
      * @return string
      */
-    public function getPath()
+    public function getPath(): string
     {
         return $this->path;
     }
 
     /**
-     * @param $linkTarget
+     * @param string $linkTarget
      */
-    public function setLinkTarget($linkTarget)
+    public function setLinkTarget(string $linkTarget)
     {
         $this->linkTarget = $linkTarget;
     }
@@ -82,15 +82,15 @@ class Record
     /**
      * @return string
      */
-    public function getLinkTarget()
+    public function getLinkTarget(): string
     {
         return $this->linkTarget;
     }
 
     /**
-     * @param $dataHash
+     * @param string $dataHash
      */
-    public function setDataHash($dataHash)
+    public function setDataHash(string $dataHash)
     {
         $this->dataHash = $dataHash;
     }
@@ -98,15 +98,15 @@ class Record
     /**
      * @return string
      */
-    public function getDataHash()
+    public function getDataHash(): string
     {
         return $this->dataHash;
     }
 
     /**
-     * @param $encryptionKey
+     * @param string $encryptionKey
      */
-    public function setEncryptionKey($encryptionKey)
+    public function setEncryptionKey(string $encryptionKey)
     {
         $this->encryptionKey = $encryptionKey;
     }
@@ -114,7 +114,7 @@ class Record
     /**
      * @return string
      */
-    public function getEncryptionKey()
+    public function getEncryptionKey(): string
     {
         return $this->encryptionKey;
     }
@@ -122,7 +122,7 @@ class Record
     /**
      * @param int $fileSize
      */
-    public function setFileSize($fileSize)
+    public function setFileSize(int $fileSize)
     {
         $this->fileSize = $fileSize;
     }
@@ -130,7 +130,7 @@ class Record
     /**
      * @return int
      */
-    public function getFileSize()
+    public function getFileSize(): int
     {
         return $this->fileSize;
     }
@@ -138,7 +138,7 @@ class Record
     /**
      * @return string
      */
-    public function getFileName()
+    public function getFileName(): string
     {
         if (!$this->fileName) {
             $this->fileName = sha1($this->getDomain() . '-' . $this->getPath());
@@ -150,7 +150,7 @@ class Record
     /**
      * @return bool
      */
-    public function isFile()
+    public function isFile(): bool
     {
         return $this->getFileSize() > 0;
     }
