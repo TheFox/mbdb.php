@@ -13,11 +13,10 @@
 		}
 	],
 	"require": {
-		"php": "~5.3 || ~7.0"
+		"php": "^5.3 || ^7.0"
 	},
 	"require-dev": {
-		"doctrine/common": "~2.4",
-		"thefox/phpcsrs": "~1.0"
+		"doctrine/common": "^2.4"
 	},
 	"autoload": {
 		"psr-0": { "TheFox": "src" }
