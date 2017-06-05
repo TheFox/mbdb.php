@@ -16,7 +16,8 @@
 		"php": "^5.3 || ^7.0"
 	},
 	"require-dev": {
-		"doctrine/common": "^2.4"
+		"doctrine/common": "^2.4",
+		"phpstan/phpstan": "^0.7"
 	},
 	"autoload": {
 		"psr-0": { "TheFox": "src" }
