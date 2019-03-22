@@ -8,5 +8,3 @@
 - PSR1/PSR2 and DocBlocks.
 - Moved Make targets to Bash scripts.
 - PHP7 only.
-
-## v0.1.0
