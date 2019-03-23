@@ -2,7 +2,7 @@
 
 Read `.mbdb` files using PHP.
 
-The `.mbdb` file extension is associated with the Apple iTunes, the standard manage application for iOS devices. A `.mbdb` file contains a list of files, that are stored in the backup of the iOS device. The MBDB database was introduced in iTunes 9.2.
+The `.mbdb` file extension is associated with the Apple iTunes, the standard manage application for iOS devices. A `.mbdb` file contains a list of files, that are stored in the backup of the iOS device. The MB database was introduced in iTunes 9.2.
 
 ## Project Outlines
 
