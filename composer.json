@@ -13,7 +13,7 @@
         "backup"
     ],
     "homepage": "https://fox21.at",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Christian Mayer",
