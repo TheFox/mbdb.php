@@ -23,7 +23,6 @@ composer require thefox/mbdb
 ## Links
 
 - [Packagist Package](https://packagist.org/packages/thefox/mbdb)
-- [Travis CI Repository](https://travis-ci.org/TheFox/mbdb.php)
 - [iphonebackupbrowser](https://code.google.com/p/iphonebackupbrowser/wiki/MbdbMbdxFormat)
 - [ITunes_Backup](http://theiphonewiki.com/wiki/ITunes_Backup)
 
